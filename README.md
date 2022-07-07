@@ -41,4 +41,6 @@ Tips:
 
 `gobuster vhost --url domain.htb --wordlist /usr/share/amass/wordlists/subdomains-top1mil-110000.txt` # Fuzzing con gobuster subdomains
 
+`dig axfr @dns-server <target>` # Ataque de transferencia de zona (Domain's Attack)
+
 
