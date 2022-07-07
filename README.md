@@ -56,8 +56,8 @@ Lo primero que necesitamos saber es la *community string*, de normal general sue
 Una vez obtenemos la *community string* </br>
 <h5>note: La versión suele ser la 2c</h5>
 
-`snmpbulkwalk -c [COMM_STRING] -v [VERSION] [IP] . `
+`snmpbulkwalk -c [COMM_STRING] -v [VERSION] [IP] . `  # Enumeración de SNMP con snmpbulkwalk
 
-`snmp-check [DIR_IP] -p [PORT] -c [COMM_STRING]`
-
-`nmap --script "snmp* and not snmp-brute" <target>`
+`snmp-check [DIR_IP] -p [PORT] -c [COMM_STRING]` # Enumeración de SNMP con snmp-check
+ 
+`nmap --script "snmp* and not snmp-brute" <target>` # Apoyo a las enumeraciones, script de nmap.
