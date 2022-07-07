@@ -43,4 +43,5 @@ Tips:
 
 `dig axfr @dns-server <target>` # Ataque de transferencia de zona (Domain's Attack)
 
+`ldns-walk @ns1.insecuredns.com insecuredns.com` # Walking for DNS
 
