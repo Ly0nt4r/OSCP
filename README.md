@@ -4,6 +4,7 @@
 
 <h2> Enumeración - Fase Inicial </h2>
 Enumeración de puertos: </br>
+#
 
 `sudo nmap --minrate-5000 -p- -vvv -Pn -n -oG openPorts.txt <ip>` # Encontrar puertos abiertos con nmap </br>
 
