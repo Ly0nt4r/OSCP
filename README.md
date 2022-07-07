@@ -66,10 +66,8 @@ Una vez obtenemos la *community string* </br>
 
 Este gestor de contenidos (CMS) suele ser un punto clave en los CTF, contiene un panel de login y pluggins que suelen ser vulnerables.
 
-### Enumeración de WordPress
-
 `wpscan -u "http://ip/" `
 
 En caso de que la web principal del gestor de contenido se encuentre en otra ruta personalizada, por ejemplo /invent-wordpress/, deberemos especificarlo a través del parámetro --wp-content-dir para la correcta enumeración desde wpscan:
 
-`wpscan -u "http://ip/" --wp-content-dir "invent-wordpress"`
+`wpscan -u "http://ip/" --wp-content-dir "invent-wordpress"` # Scanner WP with modify path
