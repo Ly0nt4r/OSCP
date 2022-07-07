@@ -45,3 +45,6 @@ Tips:
 
 `ldns-walk @ns1.insecuredns.com insecuredns.com` # Walking for DNS
 
+## SNMP Enumeration 
+
+Generalmente corre sobre puertos UPD ( 161 ), nos puede permitir enumerar más de la cuenta a nivel de sistema. Para saber qué software corren, así como rutas, usuarios del sistema, puertos internos abiertos TCP/UDP, etc.
