@@ -31,4 +31,14 @@
 Tips:
 ** Enumerar directorios ocultos "http://ip/.FUZZ/"
 ** Enumerar directorios dentro de otros directorios "http://ip/admin/FUZZ"
+** En wfuzz, puedes skyp el certificado SSL con la bandera "-k"
+** Puedes usar hilos para agilizar, no aconsejable poner más de 200 "-t 200"
 ```
+
+## Enumeración de subdominios - Fuzzing 
+
+`wfuzz --hc 404 -c -w /usr/share/amass/wordlists/subdomains-top1mil-110000.txt -H "HOST: FUZZ.domain.htb" domain.htb` # Fuzzear con wfuzz subdominios
+
+`gobuster vhost --url domain.htb --wordlist /usr/share/amass/wordlists/subdomains-top1mil-110000.txt` # Fuzzing con gobuster subdomains
+
+
