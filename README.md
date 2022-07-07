@@ -88,6 +88,9 @@ Tambien es posible enumerar usuarios validos si aplicamos fuerza bruta con hydra
 
 `hydra -l admin -P dict_Password.txt <ip> "http-post-form" "/path_login.php:user=^USER^&password=^PASS^:F=messageError"` # Fuerza bruta WP para el usuario admin.
 
+Es importante ver si la web cuenta con contenido escrito. Esto es importante para poder crear nuestro propio diccionario de palabras claves.
+
+`cewl -w diccionario http://ip/ --with-numbers ` # aplicamos cewl, esto nos hará un diccionario con palabras clave de la web.
 
 
 
