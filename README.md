@@ -70,4 +70,4 @@ Este gestor de contenidos (CMS) suele ser un punto clave en los CTF, contiene un
 
 En caso de que la web principal del gestor de contenido se encuentre en otra ruta personalizada, por ejemplo /invent-wordpress/, deberemos especificarlo a través del parámetro --wp-content-dir para la correcta enumeración desde wpscan:
 
-`wpscan -u "http://ip/" --wp-content-dir "invent-wordpress"` # Scanner WP with modify path
+`wpscan -u "http://ip/" --wp-content-dir "invent-wordpress"` # Escaner WP con la ruta modificada
