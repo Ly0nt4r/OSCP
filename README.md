@@ -48,3 +48,15 @@ Tips:
 ## SNMP Enumeration 
 
 Generalmente corre sobre puertos UPD ( 161 ), nos puede permitir enumerar más de la cuenta a nivel de sistema. Para saber qué software corren, así como rutas, usuarios del sistema, puertos internos abiertos TCP/UDP, etc.
+
+Lo primero que necesitamos saber es la *community string*, de normal general suele estar entre **public** o **private**
+
+`onesixtyone -c dic.txt -i output.txt` # onesixtyone nos ayuda a obtener la community string con fuerza bruta.
+
+Una vez obtenemos la *community string*:
+note: La versión suele ser la 2c
+`snmpbulkwalk -c [COMM_STRING] -v [VERSION] [IP] . `
+
+`snmp-check [DIR_IP] -p [PORT] -c [COMM_STRING]`
+
+`nmap --script "snmp* and not snmp-brute" <target>`
