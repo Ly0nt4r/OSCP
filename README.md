@@ -53,8 +53,9 @@ Lo primero que necesitamos saber es la *community string*, de normal general sue
 
 `onesixtyone -c dic.txt -i output.txt` # onesixtyone nos ayuda a obtener la community string con fuerza bruta.
 
-Una vez obtenemos la *community string*:
-note: La versión suele ser la 2c
+Una vez obtenemos la *community string* </br>
+<h5>note: La versión suele ser la 2c</h5>
+
 `snmpbulkwalk -c [COMM_STRING] -v [VERSION] [IP] . `
 
 `snmp-check [DIR_IP] -p [PORT] -c [COMM_STRING]`
