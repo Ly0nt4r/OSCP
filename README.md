@@ -148,5 +148,6 @@ Encontrado las tablas, continuamos:
 
 *Podemos sustituir los números por lo que queramos, la cosa es tener visible que nos reporta la inyección de la query*
 
+Suponiendo que se visualiza el número 3, podemos empezar a sustituir para filtrar contenido de la base de datos.
 
-
+`http://fakesite.com/report.php?id=-23 union select 1,2,database(),4,5;-- -` # imprime el nombre de la base de datos.
