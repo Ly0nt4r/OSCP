@@ -112,7 +112,8 @@ Enumerar y detectar pluggins vulnerables tambien ayudaran a la intrusión.
 `admin' or sleep(5);-- -` # Inyección en panel de login, controlada por el tiempo de respuesta. En este caso, 5 segundos.
 
 **Enumeración de caracteres en la base de datos**
-*Para esta enumeración, es necesario conocer algún dato valido ya que usamos el operador "AND".
+
+*Para esta enumeración, es necesario conocer algún dato valido ya que usamos el operador "AND".*
 
 `admin' and substring(username,1,1)='a' #devolverá true, ya que la primera posición de "admin" es "a". ` # Enumeración por caracter, en base de error.
 
