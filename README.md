@@ -99,3 +99,7 @@ Enumerar y detectar pluggins vulnerables tambien ayudaran a la intrusión.
 `wpscan --url http(s)://ip/ --enumerate p` # "p" Detectará todos los pluggins
 
 `wpscan --url http(s)://ip/ --enumerate p --plugins-detection aggressive` # Detectará todos los pluggins, con un parametro agresivo. Recomendable.
+
+## SQLI
+
+h **Union Select*
