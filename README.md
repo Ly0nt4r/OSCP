@@ -127,5 +127,6 @@ Lo primero que realizaremos, será obtener algún tipo de error, para ello inten
 
 `http://fakesite.com/report.php?id=23' ` # Con una comilla final.
 `http://fakesite.com/report.php?id=23' group by 5;-- - ` # Intentamos sacar cuantas tablas tiene la BBDD.
+
 *A tener en cuenta, que a veces cuando sobre-excedemos con el group by, cierto contenido de la web, puede desaparecer*
 
