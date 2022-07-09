@@ -168,9 +168,22 @@ Ahora el proceso es muy similar para obtener las columnas y los datos de las col
 
 # Active Directory
 
-*Para entender mejor kerberos, recomiendo visitar mi explicación en GitHub sobre kerberos*
+*Para entender mejor kerberos, recomiendo visitar mi explicación en GitHub.*
 
 ## Enumeración
 
+*Enumerar y escuchar en puertos de impresoras, puede reportar credenciales en texto claro*
 
+`nc -vv -l -p 444` # Escuchando por el puerto de impresora.
 
+*Enumerar DNS podría brindar información sobre servidores clave en el dominio como web, impresoras, recursos compartidos, etc...*
+
+`gobuster dns -d domain.local -t 25 -w /opt/Seclist/Discovery/DNS/subdomain-top2000.txt` # Enumerar DNS del domain.
+
+*Verificamos el acceso con credenciales nulas o invitados a servicios smb* 
+
+`enum4linux -a -u "" -p "" <DC IP> && enum4linux -a -u "guest" -p "" <DC IP>` # Utilizamos enum4linux para intentar conectarnos a servicios compartidos de smb
+
+`smbmap -u "" -p "" -P 445 -H <DC IP> && smbmap -u "guest" -p "" -P 445 -H <DC IP>`  # Utilizamos smbmap para intentar conectarnos a servicios compartidos de smb
+
+`smbclient -U '%' -L //<DC IP> && smbclient -U 'guest%' -L //` #  # Utilizamos smbclient para intentar conectarnos a servicios compartidos de smb
