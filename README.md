@@ -192,4 +192,9 @@ Ahora el proceso es muy similar para obtener las columnas y los datos de las col
 
 `nmap -n -sV --script "ldap* and not brute" -p 389 <DC IP> ` # Enumeramos ldap con script de nmap
 
+*Enumeramos AD en busca de usuarios validos*
+
+`./kerbrute_linux_amd64 userenum -d domain.htb diccionario_Usuarios.txt` # Utilizamos un script "kerbrute" para listar usuarios con wordlist.
+
+`crackmapexec smb domain.htb  -u '' -p '' --users` # Si tenemos acceso con usuario nulo, podemos listar usuarios con crackmapexec.
 
