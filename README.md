@@ -3,7 +3,7 @@
 ![banner_oscp](https://user-images.githubusercontent.com/87484792/177843931-081eca92-24f1-4743-a632-48ee65b2ba4a.png)
 
 # Enumeración - Fase Inicial
-## Enumeración de puertos
+## (Enumeración de puertos)
 
 `sudo nmap --minrate-5000 -p- -vvv -Pn -n -oG openPorts.txt <ip>` # Encontrar puertos con nmap </br>
 
