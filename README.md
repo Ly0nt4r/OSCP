@@ -210,4 +210,4 @@ Ahora el proceso es muy similar para obtener las columnas y los datos de las col
 
 *El ataque ASREPRoast busca usuarios sin el atributo requerido de autenticación previa de Kerberos (DONT_REQ_PREAUTH)*
 
-`python3 GetNPUsers.py domain.htb/ -usersfile usernames.txt -outputfile hashes.asreproast`
+`python3 GetNPUsers.py domain.htb/ -usersfile usernames.txt -outputfile hashes.asreproast` # Buscamos usuarios con un diccionario, si el usuario no necesita pre-autenticación, nos aparecerá su hash. *(Intentaremos crackearlo offline)*.
