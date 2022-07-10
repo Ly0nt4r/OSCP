@@ -180,7 +180,7 @@ Ahora el proceso es muy similar para obtener las columnas y los datos de las col
 
 `gobuster dns -d domain.local -t 25 -w /opt/Seclist/Discovery/DNS/subdomain-top2000.txt` # Enumerar DNS del domain.
 
-*Verificamos el acceso con credenciales nulas o invitados a servicios smb* 
+**Verificamos el acceso con credenciales nulas o invitados a servicios smb**
 
 `enum4linux -a -u "" -p "" <DC IP> && enum4linux -a -u "guest" -p "" <DC IP>` # Utilizamos enum4linux para intentar conectarnos a servicios compartidos de smb
 
@@ -188,11 +188,11 @@ Ahora el proceso es muy similar para obtener las columnas y los datos de las col
 
 `smbclient -U '%' -L //<DC IP> && smbclient -U 'guest%' -L //` #  # Utilizamos smbclient para intentar conectarnos a servicios compartidos de smb
 
-*Enumeramos ldap*
+**Enumeramos ldap**
 
 `nmap -n -sV --script "ldap* and not brute" -p 389 <DC IP> ` # Enumeramos ldap con script de nmap
 
-*Enumeramos AD en busca de usuarios validos*
+**Enumeramos AD en busca de usuarios validos**
 
 `./kerbrute_linux_amd64 userenum -d domain.htb diccionario_Usuarios.txt` # Utilizamos un script "kerbrute" para listar usuarios con wordlist.
 
