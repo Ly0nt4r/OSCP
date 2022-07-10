@@ -198,3 +198,11 @@ Ahora el proceso es muy similar para obtener las columnas y los datos de las col
 
 `crackmapexec smb domain.htb  -u '' -p '' --users` # Si tenemos acceso con usuario nulo, podemos listar usuarios con crackmapexec.
 
+**Enumeramos todos los usuarios del directorio activo**
+
+*Cuando tenemos* **credenciales validas** *, podemos enumerar todos los usuarios existentes.*
+
+`GetADUsers.py -all -dc-ip 10.10.10.110 domain.com/username` # enumeramos con GetADUsers, un script en Python
+
+`enum4linux -a -u "user" -p "password" <DC IP>` # Enumeramos con enum4linux
+
