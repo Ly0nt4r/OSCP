@@ -166,6 +166,13 @@ Ahora el proceso es muy similar para obtener las columnas y los datos de las col
 
 `http://fakesite.com/report.php?id=-23 union Select 1,2,concat(column1,column2),4,5 from tablename limit 0,1` # imprimimos los datos de la columna
 
+## SQL Truncatión
+
+La vulnerabilidad de truncamiento de SQL ocurre cuando una base de datos trunca la entrada del usuario debido a una restricción en la longitud.
+El atacante puede crear un usuario 'admin' con su propia contraseña. Ahora, la base de datos tiene dos entradas de administrador 'username', pero con diferentes contraseñas. El atacante puede iniciar sesión con las credenciales recién creadas para obtener un panel de administración porque los nombres de usuario "admin" y "admin" son iguales para el nivel de la base de datos.
+
+`username=admin++++++++(max.longitud)&password=testpwn123`  # Ejemplo de truncamiento, la base de datos eliminará el texto sobrante para que quepa en la base de datos, y despreciará caracteres extraños y/o espacios. 
+
 # Active Directory
 
 *Para entender mejor kerberos, recomiendo visitar mi explicación en GitHub.*
