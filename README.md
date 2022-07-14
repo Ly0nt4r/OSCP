@@ -100,7 +100,7 @@ Enumerar y detectar pluggins vulnerables tambien ayudaran a la intrusión.
 
 `wpscan --url http(s)://ip/ --enumerate p --plugins-detection aggressive` # Detectará todos los pluggins, con un parametro agresivo. Recomendable.
 
-## SQLI
+# SQLI
 *SqlMap no está permitido en el OSCP*
 
 **Inyección basica de error**
@@ -117,7 +117,7 @@ Enumerar y detectar pluggins vulnerables tambien ayudaran a la intrusión.
 
 `admin' and substring(username,1,1)='a' #devolverá true, ya que la primera posición de "admin" es "a". ` # Enumeración por caracter, en base de error.
 
-**Union Select**
+## Union Select
 
 Empezaremos con una web de ejemplo:
 
