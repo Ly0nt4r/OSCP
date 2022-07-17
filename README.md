@@ -319,3 +319,9 @@ información de dominio :querydominfo
 Encuentre SID por nombre :lookupnames <username> 
 Encuentre más SID :lsaenumsid Ciclo RID (verifique más SID) :lookupsids <sid>
 ```
+
+## Listar carpetas
+
+`smbmap -H <IP> ` # Listamos con smbmap las carpetas. Sin proporcionar credenciales.
+
+`smbmap -H <IP> -u "username" -p "password" `  # Listamos con credenciales validas
