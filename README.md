@@ -263,3 +263,14 @@ Invoke-Kerberoast -OutputFormat hashcat | % { $_.Hash } | Out-File -Encoding ASC
 klist
 .\PsExec.exe -accepteula \\lab-wdc01.jurassic.park cmd`  # Listamos el ticket en la cache de la memoria
 
+# SMB
+
+## Enumeración
+
+`nmap --min-rate 5000 -p139,445 -vvv -Pn <ip>` # miramos si tenemos el servicio SMB abierto
+
+`enum4linux -a [-u "<username>" -p "<passwd>"] <IP>` # dumpeamos información con enum4linux
+
+`map --script "safe or smb-enum-*" -p 445 <IP>` # lanzamos scripts de nmap para smb
+
+
