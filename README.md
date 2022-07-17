@@ -267,10 +267,10 @@ klist
 
 ## Enumeración
 
-`nmap --min-rate 5000 -p139,445 -vvv -Pn <ip>` # miramos si tenemos el servicio SMB abierto
+`nmap --min-rate 5000 -p139,445 -vvv -Pn <ip>` # Miramos si tenemos el servicio SMB abierto
 
-`enum4linux -a [-u "<username>" -p "<passwd>"] <IP>` # dumpeamos información con enum4linux
+`enum4linux -a [-u "<username>" -p "<passwd>"] <IP>` # Dumpeamos información con enum4linux
 
-`map --script "safe or smb-enum-*" -p 445 <IP>` # lanzamos scripts de nmap para smb
+`map --script "safe or smb-enum-*" -p 445 <IP>` # Lanzamos scripts de nmap para smb
 
-
+`rpcclient -U "" -N <IP> ` # Conectamos con rpc, con una sesión nula.
