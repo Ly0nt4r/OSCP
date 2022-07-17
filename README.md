@@ -294,5 +294,9 @@ Obtener miembros :queryaliasmem builtin|domain <0xrid>
 ## Enumeración de dominios 
  
 Lista de dominios : enumdomains Obtener SID :lsaquery 
-información de dominio :querydominfo Más SID Encuentre SID por nombre :lookupnames <username> 
+información de dominio :querydominfo 
+
+## Más SID 
+
+Encuentre SID por nombre :lookupnames <username> 
 Encuentre más SID :lsaenumsid Ciclo RID (verifique más SID) :lookupsids <sid>
