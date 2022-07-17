@@ -329,3 +329,7 @@ Encuentre más SID :lsaenumsid Ciclo RID (verifique más SID) :lookupsids <sid>
 `crackmapexec smb <IP> -u '' -p '' --shares ` # Listamos con crackmapexec, sin credenciales.
 
 ## BruteForce User/Password
+
+`nmap --script smb-brute.nse -p445 <IP>` # script de nmap, brute force.
+
+`crackmapexec smb <IP> -u 'admin' -p wordlist_pass.txt # or # crackmapexec smb <IP> -u 'wordlist_user.txt' -p password ` # fuerza bruta para usuario o password, con diccionario.
