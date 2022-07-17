@@ -277,26 +277,43 @@ klist
 
 ## Enumeración de usuarios 
 
-Lista de usuarios : querydispinfoyenumdomusers 
+``Lista de usuarios : querydispinfoyenumdomusers 
+
 Obtener detalles del usuario :queryuser <0xrid> 
+
 Obtener grupos de usuarios :queryusergroups <0xrid> 
+
 OBTENER SID de un usuario :lookupnames <username> 
-Obtener alias de usuarios :queryuseraliases [builtin|domain] <sid> 
  
+Obtener alias de usuarios :queryuseraliases [builtin|domain] <sid>
+`` 
+
+``
 ## Enumeración de grupos 
 
 Lista de grupos :enumdomgroups 
+
 Obtener detalles del grupo :querygroup <0xrid> 
+
 Obtener miembros del grupo :querygroupmem <0xrid> 
-Enumeración de grupos de alias Lista de alias :enumalsgroups <builtin|domain> 
+``
+
+
+## Enumeración de grupos de alias 
+``
+Lista de alias :enumalsgroups <builtin|domain> 
+
 Obtener miembros :queryaliasmem builtin|domain <0xrid> 
- 
+``
+
 ## Enumeración de dominios 
- 
+`` 
 Lista de dominios : enumdomains Obtener SID :lsaquery 
 información de dominio :querydominfo 
+``
 
 ## Más SID 
-
+``
 Encuentre SID por nombre :lookupnames <username> 
 Encuentre más SID :lsaenumsid Ciclo RID (verifique más SID) :lookupsids <sid>
+``
