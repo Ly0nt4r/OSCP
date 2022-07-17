@@ -325,3 +325,7 @@ Encuentre más SID :lsaenumsid Ciclo RID (verifique más SID) :lookupsids <sid>
 `smbmap -H <IP> ` # Listamos con smbmap las carpetas. Sin proporcionar credenciales.
 
 `smbmap -H <IP> -u "username" -p "password" `  # Listamos con credenciales validas
+
+`crackmapexec smb <IP> -u '' -p '' --shares ` # Listamos con crackmapexec, sin credenciales.
+
+## BruteForce User/Password
