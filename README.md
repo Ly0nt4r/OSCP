@@ -277,7 +277,8 @@ klist
 
 ## Enumeración de usuarios 
 
-``Lista de usuarios : querydispinfoyenumdomusers 
+``
+Lista de usuarios : querydispinfoyenumdomusers 
 
 Obtener detalles del usuario :queryuser <0xrid> 
 
@@ -288,9 +289,9 @@ OBTENER SID de un usuario :lookupnames <username>
 Obtener alias de usuarios :queryuseraliases [builtin|domain] <sid>
 `` 
 
-``
-## Enumeración de grupos 
 
+## Enumeración de grupos 
+``
 Lista de grupos :enumdomgroups 
 
 Obtener detalles del grupo :querygroup <0xrid> 
