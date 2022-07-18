@@ -1,0 +1,249 @@
+
+Revision 0.6.5, released XX-10-2019
+-----------------------------------
+
+No changes yet
+
+Revision 0.6.4, released 11-08-2019
+-----------------------------------
+
+- Added support for specifying master or localized SNMPv3 USM
+  keys (-3[mMkK] options)
+- PEP8'ed the whole project
+
+Revision 0.6.3, released 14-04-2019
+-----------------------------------
+
+- Upper constraint pysnmp to 5.0.0 in setup.py as well
+- Upper constraint pysmi to 0.4.0 and lower constraint it to 0.3.4+
+- Fixed broken -M and -P options to make non-default MIB paths
+  operational
+
+Revision 0.6.2, released 30-12-2018
+-----------------------------------
+
+- Bumped upper Python version to 3.7
+- Copyright extended towards 2019
+- Fixed Sphinx links in docs
+
+Revision 0.6.1, released 07-01-2018
+-----------------------------------
+
+- The pysnmp-apps project renamed into a hopefully more meaningful
+  snmpclitools
+
+Revision 0.5.3, released 06-01-2018
+-----------------------------------
+
+- Added Sphinx docs for the command-line tools
+- The *-Oe* option implemented to disable integer/bits enumeration
+  rendering.
+- Copyright extended towards 2018
+
+Revision 0.5.2, released 22-12-2017
+-----------------------------------
+
+- Fixed SNMP crypto algorithm identifiers to be named consistently after
+  key length rather than MAC length
+- Added strong AES privacy algorithms with Blumenthal key localization
+- Fix to allow longer USM user names (up to 32 octets)
+
+Revision 0.5.1, released 21-11-2017
+-----------------------------------
+
+- Added strong crypto support
+- CLI tools usage aligned with the Net-SNMP prototypes for
+  mocking consistency
+- Migrated references from SourceForge
+
+Revision 0.4.2, released 09-08-2017
+-----------------------------------
+
+- Harden values renderer against broken SNMP indices
+- Bumped pysnmp dependency to 4.3.9
+- Fixed crash on string value rendering due to improper
+  low-level pyasn1 .prettyOut() call
+- Source code PEP8'ed
+- Author's e-mail changed, copyright extended towards 2017
+
+Revision 0.4.1, released 12-02-2016
+-----------------------------------
+
+- Copyright notice added to non-trivial source code files.
+- Fix to stray trailing OID lurking to snmp*walk.py output.
+- Fix to __doc__ use in setup.py to make -O0 installation mode working.
+
+Revision 0.4.0, released 28-09-2015
+-----------------------------------
+
+- All apps renamed into snmp*.py and moved to scripts/ directory
+  for a more conventional layout.
+- All apps updated to support the latest pysnmp Standard Applications API.
+- Initial integration with the PySMI MIB compiler. The -P<x> option now
+  partially supported. All tools try to download missing ASN.1 MIBs from 
+  snmplabs.com web site by default.
+- Conditional variable buildValueOnly replaced with two buildObjectName
+  and buildValue at MibViewProxy.
+
+Revision 0.3.4, released 05-10-2013
+-----------------------------------
+
+- License updated to vanilla BSD 2-Clause to ease package use
+  (http://opensource.org/licenses/BSD-2-Clause).
+- Upper level exception handling improved for all apps.
+- Distribute is gone, switched to setuptools completely.
+- Fix to config.addTargetAddr() invocation -- since pysnmp 4.2.3, reworked
+  pysnmp LCD model does not require tagging transport address to bind it 
+  with communityName. 
+
+Revision 0.3.3, released 30-01-2013
+-----------------------------------
+
+- Tools will report snmpclitools package version along with pysnmp version
+  being used.
+- Package meta-information updated.
+- Package version is now in __init__.__version__
+
+Revision 0.3.2, released 21-04-2012
+-----------------------------------
+
+- MIB path mangiling reworked
+- Fix to make pysnmptrap INFORM C/L switch operational
+
+Revision 0.3.1, released 06-11-2011
+-----------------------------------
+
+- Major overhawl for Python 2.4 -- 3.2 compatibility:
+
+  + get rid of old-style types
+  + drop string module usage
+  + switch to rich comparation
+  + drop explicit long integer type use
+  + map()/filter() replaced with list comprehension
+  + apply() replaced with \*/\*\*args
+  + switched to use 'key' sort() callback function
+  + modified not to use py3k-incompatible exception syntax
+  + dictionary operations made 2K/3K compatible
+
+Revision 0.2.11b
+----------------
+
+- Fix to ignore empty value in pysnmptranslate pretty printer
+
+Revision 0.2.11a
+----------------
+
+- New options (-Cp -Ct -Cc) implemented for pysnmp*walk tools.
+- All tools now report error OID.
+- EOM condition detection adjusted to reflect modified pysnmp API.
+- The pysnmptrap tool code cleaned up.
+- HEX values printout improved.
+
+Revision 0.2.10a
+----------------
+
+- Fix to SNMP Apps: pass contextEngineId and contextName from command line
+  to SNMP App API.
+- The missing pysnmptrap tool added to distro and fixed to make it properly
+  initializing SNMPv1/v2c trap PDU from command line parameters.
+
+Revision 0.2.9a
+---------------
+
+- UDP over IPv6 transport added.
+- Fix to allow SET'ting values to MIB table instances.
+
+Revision 0.2.8a
+---------------
+
+- API versioning mechanics retired (pysnmp_apps.v4 -> pysnmp_apps).
+- Attempt to use setuptools for package management whenever available.
+- The apps are now ready for py2exe processing.
+
+Revision 0.2.7a
+---------------
+
+- Fixes to pysnmptranslate tool to output MIB text fields (DESCRIPTION etc.)
+
+Revision 0.2.6a
+---------------
+
+- UNSTABLE ALPHA RELEASE.
+- Default timeout/retries set to net-snmp default values.
+- AES cipher now supported.
+
+Revision 0.2.5a
+---------------
+
+- UNSTABLE ALPHA RELEASE.
+- The snmptranslate tool implemented.
+- The -d and -D debugging parameters implemented.
+- Minor fixes.
+
+Revision 0.2.4a
+---------------
+
+- UNSTABLE ALPHA RELEASE.
+- pysnmp*walk tools modified to stop walking MIB on end-of-table rather 
+  than on end-of-mib to match net-snmp tools behaviour.
+- Bugfix to c/l params scanner -- allow other some printables other
+  than alphas and numerics.
+- Handle syntax-less OID's whenever reported by broken Agents
+
+Revision 0.2.3a
+---------------
+
+- UNSTABLE EARLY ALPHA RELEASE.
+- Adjusted to changed SMI model (in pysnmp 4.1.5a)
+- Minor fixes to Object Name command-line parser
+
+Revision 0.2.2a
+---------------
+
+- UNSTABLE EARLY ALPHA RELEASE.
+- Adjusted to changed pysnmp.entity.config.addV3User() API
+- Fixes to command-line SNMPv3 protocols parser
+
+Revision 0.2.1a
+---------------
+
+- UNSTABLE EARLY ALPHA RELEASE.
+- Re-worked to run on top of the latest pysnmp API (4.1.x)
+- CLI internals have been re-designed towards clearer modularity
+  (see cli/base.py CVS log for details)
+- pysnmpset/pysnmpwalk/pysnmpbulkwalk tools added
+
+Revision 0.1.1a
+---------------
+
+- UNSTABLE EARLY ALPHA RELEASE.
+- Fixed long-pending typo in usage formatting
+
+Revision 0.1.0a
+---------------
+
+- UNSTABLE EARLY ALPHA RELEASE.
+- Re-worked to run on top of the latest pysnmp API (4.x)
+- SPARK-based parser used for c/l parsing
+- Rudimental API versioning implemented to let incompatible package
+  branches to co-exist within the same Python installation.
+
+Revision 0.0.3
+--------------
+
+- Bugfix to scripts installation directive at setup.py. All apps
+  now install as 'scripts'.
+- CLI classes adjucted to match new abstract ASN1 classes API
+
+Revision 0.0.2
+--------------
+
+- Bugfix to pysnmpwalk -- must always send Null value in request
+  variable-bindings.
+
+Revision 0.0.1
+--------------
+- PySNMP-based applications split off the pysnmp package and re-released
+  on their own
+- The command line interface to SNMP tools previously shipped along with PySNMP
+  not reworked for a more consistent design and re-released within snmpclitools.
