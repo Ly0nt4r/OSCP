@@ -89,7 +89,7 @@ http://victim.htb/file.php?recurse=expect://whoami
 
 ```
 
-**RCE to LFI**
+## RCE EN LFI
 
 Existen varias formas de conseguir ejecutar comandos en remoto a través de un Local File Inclusion, así como de acceder al sistema a través de la visualización de ciertos recursos. Para este caso, explicaré 2 técnicas a modo de ejemplo:
 
