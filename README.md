@@ -15,6 +15,8 @@
 
 `sudo nmap -sU -T5 --top-ports 500 <ip> ` # Encontrar puertos UDP con nmap
 
+# Metodologia WEB
+
 ## Enumeración de directorios - Fuzzing 
 
 `wfuzz --hc 404 -c -w /usr/share/dirbuster/wordlists/directory-list-2.3-medium.txt http://<ip>/FUZZ` # Encontrar directorios disponibles con wfuzz
@@ -46,6 +48,13 @@ Tips:
 `dig axfr @dns-server <target>` # Ataque de transferencia de zona (Domain's Attack)
 
 `ldns-walk @ns1.insecuredns.com insecuredns.com` # Walking for DNS
+
+## Información basica de la web
+
+`whatweb <ip>` # obtener información util de la web, parecido a la extensión wappalyzer
+
+`openssl s_client -connect domain.htb:443` # obteniendo información en webs con certificados ssl
+
 
 ## SNMP Enumeration 
 
@@ -334,6 +343,5 @@ Encuentre más SID :lsaenumsid Ciclo RID (verifique más SID) :lookupsids <sid>
 
 `crackmapexec smb <IP> -u 'admin' -p wordlist_pass.txt # or # crackmapexec smb <IP> -u 'wordlist_user.txt' -p password ` # fuerza bruta para usuario o password, con diccionario.
 
-# PENTESTING WEB METHODOLOGY
 
 
