@@ -343,5 +343,26 @@ Encuentre más SID :lsaenumsid Ciclo RID (verifique más SID) :lookupsids <sid>
 
 `crackmapexec smb <IP> -u 'admin' -p wordlist_pass.txt # or # crackmapexec smb <IP> -u 'wordlist_user.txt' -p password ` # fuerza bruta para usuario o password, con diccionario.
 
+# PORT FORWARDING 
+
+## SSH Local port forwarding
+ *Local (Redirección de puertos local): Reenvía un puerto local a un host remoto.*
+ 
+`ssh user@domain.htb -L 9000:localhost:3306` # Desde nuestro puerto 9000, creamos un túnel al puerto 3306 del host remoto.
+ 
+## SSH Remote port forwarding
+ *Remote (Redirección de puertos Remotos): Permite conectarse desde el servidor SSH remoto a otro servidor.*
+ 
+`ssh -R 5500:localhost:5500 user@htb.htb`
+
+## Chisel 
+
+`./chisel server -p 8000 --reverse ` # En nuestra maquina atacante 
+
+`./chisel client <ip-host-remote>:8000 R:80:localhost:80` # En la maquina victima
+
+
+ 
+
 
 
