@@ -1,5 +1,3 @@
-# En proceso
-
 ## Preparación para la OSCP - Metodología & Scripts
 
 ![banner_oscp](https://user-images.githubusercontent.com/87484792/177843931-081eca92-24f1-4743-a632-48ee65b2ba4a.png)
@@ -42,7 +40,7 @@
   * [ssh remote port forwarding](#ssh-remote-port-forwarding)
   * [Chisel](#chisel)
 - [GIT](#git)
-- [Port Knoking](#port-knocking)
+- [Port Knocking](#port-knocking)
 
 
 # Enumeración
