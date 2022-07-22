@@ -456,7 +456,12 @@ Encuentre más SID :lsaenumsid Ciclo RID (verifique más SID) :lookupsids <sid>
 
 `cd /Path/git && git status` # vemos los ultimos commit
 
+`git commit #number#` # Leemos el commit seleccionado.
+
 `git reset --hard` # recuperamos el ultimo commit
+
+`./extractor.sh /.git/ extracted` # Paso automatico para leer/recuperar el dumpeo del git.
+
 
 
 
