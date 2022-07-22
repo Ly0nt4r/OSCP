@@ -499,3 +499,12 @@ Encuentre más SID :lsaenumsid Ciclo RID (verifique más SID) :lookupsids <sid>
 `git reset --hard` # recuperamos el ultimo commit
 
 `./extractor.sh /.git/ extracted` # Paso automatico para leer/recuperar el dumpeo del git.
+
+# PORT KNOCKING
+
+Una practica para ocultar puertos.
+Los puertos principalmente permanecen cerrados, una vez se hace una secuencias de "golpeos" sobre unos puertos especificos, este puerto oculto, pasar
+
+`nmap <ip> -p <port1>,<port2>,... -r --max-retries 0 --max-parallelism 1 -sT --scan-delay 200ms --max-rtt-timeout 200ms -Pn` # golpeo de puertos, con nmap.
+
+`knock <ip> <ports>` # golpeo de puertos con script "knock"
