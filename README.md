@@ -11,6 +11,10 @@
   * [Enumeración de subdominios](#enumeración-de-subdominios---fuzzing)
   * [Enumeración de información Web](#información-basica-de-la-web)
 - [LFI](#lfi)
+  * [bypass-LFI](#bypass-lfi)
+  * [wrappers-LFI](#wrappers-lfi)
+- [RCE en LFI](#rce-en-lfi)
+  * 
 
 
 # Enumeración
@@ -99,7 +103,7 @@ http://victim.htb/file.php?recurse=expect://whoami
 
 ## RCE EN LFI
 
-**[Log Poisoning]** 
+### [Log Poisoning]
 Consiste en verificar si las rutas /var/log/auth.log y /var/log/apache2/access.log son visibles desde el LFI.
 
 En caso de serlo para la ruta /var/log/auth.log, podemos llevar a cabo técnicas de autenticación que nos permitan obtener ejecución de comandos en remoto. Esta ruta almacena las autenticaciones establecidas sobre el sistema, entre ellas además de las normales de sesión, las que van por SSH.
@@ -110,7 +114,7 @@ Ejemplo:
 
 `ssh "<?php system('whoami'); ?>"@domain.htb`
 
-**[Mail PHP Execution]**
+### [Mail PHP Execution]
 
 Consiste en aprovechar la vulnerabilidad LFI para tras visualizar los usuarios en el recurso '/etc/passwd', poder visualizar sus correspondientes mails en '/var/mail/usuario
 
