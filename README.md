@@ -14,7 +14,34 @@
   * [bypass-LFI](#bypass-lfi)
   * [wrappers-LFI](#wrappers-lfi)
 - [RCE en LFI](#rce-en-lfi)
-  * 
+  * [Log Poisoning](#log-poisoning)
+  * [mail php execution](#mail-php-execution)
+- [XXE](#xxe)
+- [SNMP enumeratión](#snmp-enumeration)
+- [Wordpress](#wordpress)
+- [SQLI](#sqli)
+  * [Unión Select](#union-select)
+  * [SQL Truncation](#sql-truncatión)
+- [Active Directory](#active-directory)
+  * [Enumeracion](#enumeración-1)
+  * [asreproast](#asreproast)
+  * [kerberoasting](#kerberoasting)
+  * [pass the hash](#pass-the-hash)
+  * [#pass the ticket](#pass-the-ticket)
+- [SMB](#smb)
+  * [Enumeracion](#enumeración-2)
+  * [Enumeración de usuarios](#enumeración-de-usuarios)
+  * [Enumeración de grupos](#enumeración-de-grupos)
+  * [Enumeración de grupos de alias](#enumeración-de-grupos-de-alias)
+  * [Enumeración de dominios](#enumeración-de-dominios)
+  * [SID](#más-sid)
+  * [Listar Carpetas](#listar-carpetas)
+  * [BruteForce](#bruteforce-userpassword)
+- [Port Forwarding](#port-forwarding)
+  * [ssh local port forwarding](#ssh-local-port-forwarding)
+  * [ssh remote port forwarding](#ssh-remote-port-forwarding)
+  * [Chisel](#chisel)
+- [GIT](#git)
 
 
 # Enumeración
@@ -472,5 +499,3 @@ Encuentre más SID :lsaenumsid Ciclo RID (verifique más SID) :lookupsids <sid>
 `git reset --hard` # recuperamos el ultimo commit
 
 `./extractor.sh /.git/ extracted` # Paso automatico para leer/recuperar el dumpeo del git.
-
-#### XXE
