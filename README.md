@@ -323,13 +323,7 @@ El atacante puede crear un usuario 'admin' con su propia contraseña. Ahora, la 
 
 `gobuster dns -d domain.local -t 25 -w /opt/Seclist/Discovery/DNS/subdomain-top2000.txt` # Enumerar DNS del domain.
 
-**Verificamos el acceso con credenciales nulas o invitados a servicios smb**
-
-`enum4linux -a -u "" -p "" <DC IP> && enum4linux -a -u "guest" -p "" <DC IP>` # Utilizamos enum4linux para intentar conectarnos a servicios compartidos de smb
-
-`smbmap -u "" -p "" -P 445 -H <DC IP> && smbmap -u "guest" -p "" -P 445 -H <DC IP>`  # Utilizamos smbmap para intentar conectarnos a servicios compartidos de smb
-
-`smbclient -U '%' -L //<DC IP> && smbclient -U 'guest%' -L //` #  # Utilizamos smbclient para intentar conectarnos a servicios compartidos de smb
+**Verificamos el acceso con credenciales nulas o invitados a servicios smb [Mirar apartado SMB]**
 
 **Enumeramos LDAP**
 
@@ -407,6 +401,23 @@ klist
 
 `map --script "safe or smb-enum-*" -p 445 <IP>` # Lanzamos scripts de nmap para smb
 
+`enum4linux -a -u "" -p "" <DC IP> && enum4linux -a -u "guest" -p "" <DC IP>` # Utilizamos enum4linux para intentar conectarnos a servicios compartidos de smb
+
+`smbmap -u "" -p "" -P 445 -H <DC IP> && smbmap -u "guest" -p "" -P 445 -H <DC IP>`  # Utilizamos smbmap para intentar conectarnos a servicios compartidos de smb
+
+`smbclient -U '%' -L //<DC IP> && smbclient -U 'guest%' -L //` #  # Utilizamos smbclient para intentar conectarnos a servicios compartidos de smb
+
+
+## Listar carpetas
+
+`smbmap -H <IP> ` # Listamos con smbmap las carpetas. Sin proporcionar credenciales.
+
+`smbmap -H <IP> -u "username" -p "password" `  # Listamos con credenciales validas
+
+`crackmapexec smb <IP> -u '' -p '' --shares ` # Listamos con crackmapexec, sin credenciales.
+
+# RPC
+
 `rpcclient -U "" -N <IP> ` # Conectamos con rpc, con una sesión nula.
 
 ## Enumeración de usuarios 
@@ -454,13 +465,6 @@ Encuentre SID por nombre :lookupnames <username>
 Encuentre más SID :lsaenumsid Ciclo RID (verifique más SID) :lookupsids <sid>
 ```
 
-## Listar carpetas
-
-`smbmap -H <IP> ` # Listamos con smbmap las carpetas. Sin proporcionar credenciales.
-
-`smbmap -H <IP> -u "username" -p "password" `  # Listamos con credenciales validas
-
-`crackmapexec smb <IP> -u '' -p '' --shares ` # Listamos con crackmapexec, sin credenciales.
 
 ## BruteForce User/Password
 
