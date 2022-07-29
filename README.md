@@ -422,7 +422,7 @@ klist
 
 ## Shell desde SMB
 
-`./psexec.py 'user:pass'@<ip>
+`./psexec.py 'user:pass'@<ip>` # ejecutamos shell desde SMB
 
 # RPC
 
