@@ -416,6 +416,14 @@ klist
 
 `crackmapexec smb <IP> -u '' -p '' --shares ` # Listamos con crackmapexec, sin credenciales.
 
+## Crear servidor SMB
+
+`./smbserver.py <name_server> <path>` # Montamos servidor smb para compartir recursos
+
+## Shell desde SMB
+
+`./psexec.py 'user:pass'@<ip>
+
 # RPC
 
 `rpcclient -U "" -N <IP> ` # Conectamos con rpc, con una sesión nula.
