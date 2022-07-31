@@ -464,7 +464,7 @@ klist
 ## Enumeración de usuarios 
 
 ```
-Lista de usuarios : querydispinfoyenumdomusers 
+Lista de usuarios : enumdomusers 
 
 Obtener detalles del usuario :queryuser <0xrid> 
 
