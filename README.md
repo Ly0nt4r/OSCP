@@ -25,7 +25,7 @@
   * [asreproast](#asreproast)
   * [kerberoasting](#kerberoasting)
   * [pass the hash](#pass-the-hash)
-  * [#pass the ticket](#pass-the-ticket)
+  * [pass the ticket](#pass-the-ticket)
 - [SMB](#smb)
   * [Enumeracion](#enumeración-2)
   * [Enumeración de usuarios](#enumeración-de-usuarios)
