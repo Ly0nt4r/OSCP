@@ -626,3 +626,5 @@ Los puertos principalmente permanecen cerrados, una vez se hace una secuencias d
 `nmap <ip> -p <port1>,<port2>,... -r --max-retries 0 --max-parallelism 1 -sT --scan-delay 200ms --max-rtt-timeout 200ms -Pn` # golpeo de puertos, con nmap.
 
 `knock <ip> <ports>` # golpeo de puertos con script "knock"
+
+# IPv6
