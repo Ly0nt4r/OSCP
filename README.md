@@ -287,6 +287,11 @@ Un atacante puede intervenir su contenido para leer archivos del sistema.
 
 En la salida del procesamiento xml, en la entidad &xxe, aparecerá el *passwd* de la maquina victima.
 
+# Unrestricted File Uploads
+
+Esta vulnerabilidad ocurre en aplicaciones web donde existe la posibilidad de subir un archivo sin que sea comprobado por un sistema de seguridad que frene peligros potenciales. 
+
+Le permite a un atacante subir archivos con código (scripts tales como .php o .aspx) y ejecutarlos en el mismo servidor. 
 
 
 # SNMP Enumeration 
