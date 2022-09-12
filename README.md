@@ -15,6 +15,7 @@
   * [Log Poisoning](#log-poisoning)
   * [mail php execution](#mail-php-execution)
 - [XXE](#xxe)
+- [Unrestricted File Upload](#unrestricted-file-uploads)
 - [SNMP enumeratión](#snmp-enumeration)
 - [Wordpress](#wordpress)
 - [SQLI](#sqli)
