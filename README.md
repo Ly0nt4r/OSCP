@@ -1,4 +1,4 @@
-## Preparación para la OSCP - Metodología & Scripts
+## Preparación para la OSCP - Metodología & Scripts - Español
 
 ![banner_oscp](https://user-images.githubusercontent.com/87484792/177843931-081eca92-24f1-4743-a632-48ee65b2ba4a.png)
 
