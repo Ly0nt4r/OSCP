@@ -585,13 +585,6 @@ Lista de dominios : enumdomains Obtener SID :lsaquery
 información de dominio :querydominfo 
 ```
 
-## Más SID 
-```
-Encuentre SID por nombre :lookupnames <username> 
-Encuentre más SID :lsaenumsid Ciclo RID (verifique más SID) :lookupsids <sid>
-```
-
-
 ## BruteForce User/Password/SID
 
 `nmap --script smb-brute.nse -p445 <IP>` # script de nmap, brute force.
@@ -599,6 +592,13 @@ Encuentre más SID :lsaenumsid Ciclo RID (verifique más SID) :lookupsids <sid>
 `crackmapexec smb <IP> -u 'admin' -p wordlist_pass.txt # or # crackmapexec smb <IP> -u 'wordlist_user.txt' -p password ` # fuerza bruta para usuario o password, con diccionario.
 
 `lookupsid.py ignite/Administrator:Ignite@987@192.168.1.105` # "Bruteforcea los usuarios en busca del SID, es necesario credenciales válidas y el nombre del dominio.
+
+
+## Más SID 
+```
+Encuentre SID por nombre :lookupnames <username> 
+Encuentre más SID :lsaenumsid Ciclo RID (verifique más SID) :lookupsids <sid>
+```
 
 # PORT FORWARDING 
 
