@@ -642,4 +642,4 @@ Los puertos principalmente permanecen cerrados, una vez se hace una secuencias d
 
 # IPv6
 
-El IPv6 es una actualización al protocolo IPv4, diseñado para resolver el problema de agotamiento de direcciones. 
+El IPv6 es una actualización al protocolo IPv4, diseñado para resolver el problema de agotamiento de direcciones. **completar**
