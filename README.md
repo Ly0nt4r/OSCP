@@ -509,6 +509,10 @@ Invoke-Kerberoast -OutputFormat hashcat | % { $_.Hash } | Out-File -Encoding ASC
 klist
 .\PsExec.exe -accepteula \\lab-wdc01.jurassic.park cmd`  # Listamos el ticket en la cache de la memoria
 
+## BloodHound
+
+*Escribir material de apoyo sobre escaladas de priv*
+
 # SMB
 
 ## Enumeración
