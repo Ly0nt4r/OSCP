@@ -512,6 +512,7 @@ klist
 ## BloodHound
 
 *Escribir material de apoyo sobre escaladas de priv*
+*Subir bloodhound-python*
 
 # SMB
 
