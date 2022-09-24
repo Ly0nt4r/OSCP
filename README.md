@@ -514,6 +514,12 @@ klist
 *Escribir material de apoyo sobre escaladas de priv*
 *Subir bloodhound-python*
 
+### BloodHound.py
+
+De manera predeterminada, BloodHound.py consultará LDAP y las computadoras individuales del dominio para enumerar usuarios, computadoras, grupos, sesiones y administradores locales, como mínimo necesitará las credenciales del dominio en el que está iniciando sesión. Deberá especificar la opción -u con un nombre de usuario de este dominio (o nombre de usuario@dominio para un usuario en un dominio de confianza). Si tiene su DNS configurado correctamente y el dominio AD está en su lista de búsqueda de DNS, BloodHound.py detectará automáticamente el dominio. De lo contrario, debe especificarlo manualmente con la opción -d .
+
+`BloodHound.py -u 'f.smith' -p 'password' -d 'domain.htb' -c all`
+
 # SMB
 
 ## Enumeración
