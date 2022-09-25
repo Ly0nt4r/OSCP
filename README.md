@@ -23,6 +23,7 @@
   * [SQL Truncation](#sql-truncatión)
 - [Active Directory](#active-directory)
   * [Enumeracion](#enumeración-1)
+  * [DNSync Attack](#dcsync-attack)
   * [asreproast](#asreproast)
   * [kerberoasting](#kerberoasting)
   * [pass the hash](#pass-the-hash)
