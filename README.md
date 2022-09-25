@@ -474,6 +474,12 @@ john --wordlist=rockyou.txt hashes.asreproast
 hashcat -m 18200 --force -a 0 hashes.asreproast rockyou.txt 
 `
 
+## DCSync Attack 
+
+El ataque DCSync consiste en "Simular" ser un Domain Controller, con ello, intentamos replicar los hashes de un Domain Controller ya existente.
+
+``
+
 ## Kerberoasting
 
 *El objetivo de Kerberoasting es recopilar tickets TGS para servicios que se ejecutan en nombre de cuentas de usuario en AD, no cuentas de computadora*
@@ -519,6 +525,7 @@ klist
 De manera predeterminada, BloodHound.py consultará LDAP y las computadoras individuales del dominio para enumerar usuarios, computadoras, grupos, sesiones y administradores locales, como mínimo necesitará las credenciales del dominio en el que está iniciando sesión. Deberá especificar la opción -u con un nombre de usuario de este dominio (o nombre de usuario@dominio para un usuario en un dominio de confianza). Si tiene su DNS configurado correctamente y el dominio AD está en su lista de búsqueda de DNS, BloodHound.py detectará automáticamente el dominio. De lo contrario, debe especificarlo manualmente con la opción -d .
 
 `BloodHound.py -u 'f.smith' -p 'password' -d 'domain.htb' -c all`
+
 
 # SMB
 
