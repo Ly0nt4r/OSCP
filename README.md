@@ -47,7 +47,7 @@
   * [Chisel](#chisel)
 - [GIT](#git)
 - [Port Knocking](#port-knocking)
-- [IPv6](#ipv6)
+
 
 
 # Enumeración
@@ -659,6 +659,3 @@ Los puertos principalmente permanecen cerrados, una vez se hace una secuencias d
 
 `knock <ip> <ports>` # golpeo de puertos con script "knock"
 
-# IPv6
-
-El IPv6 es una actualización al protocolo IPv4, diseñado para resolver el problema de agotamiento de direcciones. 
