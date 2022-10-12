@@ -49,6 +49,229 @@
 - [Port Knocking](#port-knocking)
 
 
+credits by: 0xsyr0
+
+### Basics
+
+| Name | URL |
+| --- | --- |
+| Swaks | https://github.com/jetmore/swaks |
+| CyberChef | https://gchq.github.io/CyberChef/ |
+
+### Information Gathering
+
+| Name | URL |
+| --- | --- |
+| Nmap | https://github.com/nmap/nmap |
+| pspy | https://github.com/DominicBreuker/pspy |
+| enum4linux | https://github.com/CiscoCXSecurity/enum4linux |
+| BloodHound | https://github.com/BloodHoundAD/BloodHound |
+| BloodHound Python | https://github.com/fox-it/BloodHound.py |
+
+### Vulnerability Analysis
+
+| Name | URL |
+| --- | --- |
+| Sparta | https://github.com/SECFORCE/sparta |
+| nikto | https://github.com/sullo/nikto |
+
+### Web Application Analysis
+
+| Name | URL |
+| --- | --- |
+| PayloadsAllTheThings | https://github.com/swisskyrepo/PayloadsAllTheThings |
+| ysoserial | https://github.com/frohoff/ysoserial |
+| JSON Web Tokens | https://jwt.io/ |
+| httpx | https://github.com/projectdiscovery/httpx |
+| Gobuster | https://github.com/OJ/gobuster |
+| ffuf | https://github.com/ffuf/ffuf |
+| Wfuzz | https://github.com/xmendez/wfuzz |
+| WPScan | https://github.com/wpscanteam/wpscan |
+
+### Password Attacks
+
+| Name | URL |
+| --- | --- |
+| Hydra | https://github.com/vanhauser-thc/thc-hydra |
+| Patator | https://github.com/lanjelot/patator |
+| Kerbrute | https://github.com/ropnop/kerbrute |
+| CrackMapExec | https://github.com/byt3bl33d3r/CrackMapExec |
+| SprayingToolkit | https://github.com/byt3bl33d3r/SprayingToolkit |
+| John | https://github.com/openwall/john |
+| hashcat | https://hashcat.net/hashcat |
+| LaZagne | https://github.com/AlessandroZ/LaZagne |
+| mimikatz | https://github.com/gentilkiwi/mimikatz |
+| pypykatz | https://github.com/skelsec/pypykatz |
+| RsaCtfTool | https://github.com/Ganapati/RsaCtfTool |
+| Default Credentials Cheat Sheet | https://github.com/ihebski/DefaultCreds-cheat-sheet |
+
+### Reverse Engineering
+
+| Name | URL |
+| --- | --- |
+| dnSpy | https://github.com/dnSpy/dnSpy |
+| AvalonialLSpy | https://github.com/icsharpcode/AvaloniaILSpy |
+| ghidra | https://github.com/NationalSecurityAgency/ghidra |
+| pwndbg | https://github.com/pwndbg/pwndbg |
+| cutter | https://github.com/rizinorg/cutter |
+| Radare2 | https://github.com/radareorg/radare2 |
+| GEF | https://github.com/hugsy/gef |
+| peda | https://github.com/longld/peda |
+| JD-GUI | https://github.com/java-decompiler/jd-gui |
+
+### Exploitation Tools
+
+| Name | URL |
+| --- | --- |
+| lsassy | https://github.com/Hackndo/lsassy |
+| Rubeus | https://github.com/GhostPack/Rubeus |
+| printspoofer | https://github.com/dievus/printspoofer |
+| pth-toolkit | https://github.com/byt3bl33d3r/pth-toolkit |
+| Evil-WinRM | https://github.com/Hackplayers/evil-winrm |
+| Metasploit | https://github.com/rapid7/metasploit-framework |
+| SharpCollection | https://github.com/Flangvik/SharpCollection |
+| PowerSharpPack | https://github.com/S3cur3Th1sSh1t/PowerSharpPack |
+
+### Post Exploitation
+
+| Name | URL |
+| --- | --- |
+| PEASS-ng | https://github.com/carlospolop/PEASS-ng |
+| LinEnum | https://github.com/rebootuser/LinEnum |
+| JAWS | https://github.com/411Hall/JAWS |
+| Watson | https://github.com/rasta-mouse/Watson |
+| WESNG | https://github.com/bitsadmin/wesng
+| Sherlock | https://github.com/rasta-mouse/Sherlock |
+| scavenger | https://github.com/SpiderLabs/scavenger |
+| GTFOBins | https://gtfobins.github.io/ |
+| LOLBAS | https://lolbas-project.github.io/ |
+| Impacket | https://github.com/SecureAuthCorp/impacket |
+| powercat | https://github.com/besimorhino/powercat |
+| PowerView | https://github.com/PowerShellMafia/PowerSploit/blob/master/Recon/PowerView.ps1 |
+| Windows-privesc-check | https://github.com/pentestmonkey/windows-privesc-check |
+| Windows Privilege Escalation | https://github.com/frizb/Windows-Privilege-Escalation |
+| Windows Privilege Escalation Fundamentals | https://www.fuzzysecurity.com/tutorials/16.html |
+| Priv2Admin | https://github.com/gtworek/Priv2Admin |
+
+### CVEs
+
+| CVE | Descritpion | URL |
+| --- | --- | --- |
+| CVE-2014-6271 | Shellshock PoC | https://github.com/zalalov/CVE-2014-6271 |
+| CVE-2016-5195 | Dirty COW | https://github.com/firefart/dirtycow |
+| CVE-2017-0199 | RTF Dynamite | https://github.com/bhdresh/CVE-2017-0199 |
+| CVE-2018-10933 | libSSH Authentication Bypass | https://github.com/blacknbunny/CVE-2018-10933 |
+| CVE-2018-16509 | Ghostscript | https://github.com/farisv/PIL-RCE-Ghostscript-CVE-2018-16509 |
+| CVE-2019-18634 | sudo | https://github.com/saleemrashid/sudo-cve-2019-18634 |
+| CVE-2019-5736 | Exploiting RunC | https://github.com/Frichetten/CVE-2019-5736-PoC |
+| CVE-2019-6447 | ES File Explorer Open Port Vulnerability | https://github.com/fs0c131y/ESFileExplorerOpenPortVuln |
+| CVE-2019-7304 | dirty_sock | https://github.com/initstring/dirty_sock |
+| CVE-2020-1472 | ZeroLogon Testing Script | https://github.com/SecuraBV/CVE-2020-1472 |
+| CVE-2020-1472 | ZeroLogon Exploitation Script | https://github.com/risksense/zerologon |
+| CVE-2021-1675,CVE-2021-34527 | PrintNightmare | https://github.com/nemo-wq/PrintNightmare-CVE-2021-34527 |
+| CVE-2021-1675 | PrintNightmare LPE (PowerShell) | https://github.com/calebstewart/CVE-2021-1675 |
+| CVE-2021-21972 | vCenter RCE | https://github.com/horizon3ai/CVE-2021-21972 |
+| CVE-2021-22204 | GitLab Exiftool RCE | https://github.com/CsEnox/Gitlab-Exiftool-RCE |
+| CVE-2021-22204 | GitLab Exiftool RCE Python Implementation | https://github.com/convisolabs/CVE-2021-22204-exiftool |
+| CVE-2021-26085 | Confluence Server RCE | https://github.com/Phuong39/CVE-2021-26085 |
+| CVE-2021-27928 | MariaDB/MySQL-'wsrep provider' | https://github.com/Al1ex/CVE-2021-27928 |
+| CVE-2021-3129 | Laravel Framework RCE | https://github.com/nth347/CVE-2021-3129_exploit |
+| CVE-2021-3156 | Sudo 1.8.31 Root Exploit | https://github.com/mohinparamasivam/Sudo-1.8.31-Root-Exploit |
+| CVE-2021-3560 | PwnKit C Implementation | https://github.com/hakivvi/CVE-2021-3560 |
+| CVE-2021-3560 | polkit Privilege Escalation | https://github.com/Almorabea/Polkit-exploit |
+| CVE-2021-3560 | polkit Privilege Esclation PoC | https://github.com/secnigma/CVE-2021-3560-Polkit-Privilege-Esclation |
+| CVE-2021-36934 | HiveNightmare | https://github.com/GossiTheDog/HiveNightmare |
+| CVE-2021-4034 | Pkexec Self-contained Exploit | https://github.com/ly4k/PwnKit |
+| CVE-2021-4034 | PoC for PwnKit (1) | https://github.com/dzonerzy/poc-cve-2021-4034 |
+| CVE-2021-4034 | PoC for PwnKit (2) | https://github.com/arthepsy/CVE-2021-4034 |
+| CVE-2021-4034 | PoC for PwnKit (3) | https://github.com/nikaiw/CVE-2021-4034 |
+| CVE-2021-40444 | MSHTML builders | https://github.com/aslitsecurity/CVE-2021-40444_builders |
+| CVE-2021-40444 | MSHTML Exploit | https://xret2pwn.github.io/CVE-2021-40444-Analysis-and-Exploit/ |
+| CVE-2021-40444 | MSHTML PoC | https://github.com/lockedbyte/CVE-2021-40444 |
+| CVE-2021-41379 | InstallerFileTakeOver | https://github.com/klinix5/InstallerFileTakeOver |
+| CVE-2021-41773,CVE-2021-42013, CVE-2020-17519 | SimplesApachePathTraversal | https://github.com/MrCl0wnLab/SimplesApachePathTraversal |
+| CVE-2021-42278,CVE-2021-42287 | sam-the-admin | https://github.com/WazeHell/sam-the-admin |
+| CVE-2021-42278 | sam-the-admin Python Implementation | https://github.com/ly4k/Pachine |
+| CVE-2021-42287,CVE-2021-42278 | noPac (1) | https://github.com/cube0x0/noPac |
+| CVE-2021-42287,CVE-2021-42278 | noPac (2) | https://github.com/Ridter/noPac |
+| CVE-2021-42321 | Microsoft Exchange Server RCE | https://gist.github.com/testanull/0188c1ae847f37a70fe536123d14f398 |
+| CVE-2021-44228 | Log4Shell | https://github.com/kozmer/log4j-shell-poc |
+| CVE-2021-44228 | LogMePwn | https://github.com/0xInfection/LogMePwn |
+| CVE-2022-0847 | DirtyPipe-Exploits | https://github.com/AlexisAhmed/CVE-2022-0847-DirtyPipe-Exploits |
+| CVE-2022-21999 | SpoolFool | https://github.com/ly4k/SpoolFool |
+| CVE-2022-22963 | Spring4Shell | https://github.com/tweedge/springcore-0day-en |
+| CVE-2022-23119,CVE-2022-23120 | Trend Micro Deep Security Agent for Linux Arbitrary File Read | https://github.com/modzero/MZ-21-02-Trendmicro |
+| CVE-2022-26134 | ConfluentPwn | https://github.com/redhuntlabs/ConfluentPwn |
+| CVE-2022-30190 | MS-MSDT Follina Attach Vector | https://github.com/JohnHammond/msdt-follina |
+| CVE-2022-30190 | MS-MSDT Follina Exploit PoC | https://github.com/onecloudemoji/CVE-2022-30190 |
+| CVE-2022-30190 | MS-MSDT Follina Exploit Python Implementation | https://github.com/chvancooten/follina.py |
+| CVE-2022-34918 | LPE Netfilter Kernel Exploit | https://github.com/randorisec/CVE-2022-34918-LPE-PoC |
+| n/a | SeBackupPrivilege | https://github.com/giuliano108/SeBackupPrivilege/tree/master/SeBackupPrivilegeCmdLets/bin/Debug |
+| n/a | RoguePotato | https://github.com/antonioCoco/RoguePotato |
+| n/a | RottenPotatoNG | https://github.com/breenmachine/RottenPotatoNG |
+| n/a | GenericPotato | https://github.com/micahvandeusen/GenericPotato |
+| n/a | JuicyPotato | https://github.com/ohpe/juicy-potato |
+| n/a | JuicyPotatoNG | https://github.com/antonioCoco/JuicyPotatoNG |
+| n/a | MultiPotato | https://github.com/S3cur3Th1sSh1t/MultiPotato |
+| n/a | PrintSpoofer (1) | https://github.com/dievus/printspoofer |
+| n/a | PrintSpoofer (2) | https://github.com/itm4n/PrintSpoofer |
+| n/a | Shocker (1) | https://github.com/gabrtv/shocker |
+| n/a | Shocker (2) | https://github.com/nccgroup/shocker |
+| n/a | SystemNightmare | https://github.com/GossiTheDog/SystemNightmare |
+| n/a | PetitPotam | https://github.com/topotam/PetitPotam |
+| n/a | DFSCoerce MS-DFSNM Exploit | https://github.com/Wh04m1001/DFSCoerce |
+| n/a | Windows Exploits | https://github.com/SecWiki/windows-kernel-exploits |
+| n/a | Pre-compiled Windows Exploits | https://github.com/abatchy17/WindowsExploits |
+
+### Exploiting
+
+| Name | URL |
+| --- | --- |
+| PwnTools | https://github.com/Gallopsled/pwntools |
+| checksec | https://github.com/slimm609/checksec.sh |
+| mona | https://github.com/corelan/mona |
+| Ropper | https://github.com/sashs/Ropper |
+| Buffer Overflow | https://github.com/gh0x0st/Buffer_Overflow |
+
+### Payloads
+
+| Name | URL |
+| --- | --- |
+| PayloadsAllTheThings | https://github.com/swisskyrepo/PayloadsAllTheThings |
+| Payload Box | https://github.com/payloadbox |
+| ysoserial | https://github.com/frohoff/ysoserial |
+| nishang | https://github.com/samratashok/nishang |
+| Shikata Ga Nai | https://github.com/EgeBalci/sgn |
+| unicorn | https://github.com/trustedsec/unicorn |
+| PowerLine | https://github.com/fullmetalcache/powerline |
+| woodpecker | https://github.com/woodpecker-appstore/log4j-payload-generator |
+| marshalsec | https://github.com/mbechler/marshalsec |
+| AMSI.fail | http://amsi.fail |
+| Raikia's Hub | https://raikia.com/tool-powershell-encoder/ |
+| Web-Shells | https://github.com/TheBinitGhimire/Web-Shells |
+| PHP-Reverse-Shell | https://github.com/ivan-sincek/php-reverse-shell|
+
+### Wordlists
+
+| Name | URL |
+| --- | --- |
+| SecLists | https://github.com/danielmiessler/SecLists |
+| CeWL | https://github.com/digininja/cewl |
+| CUPP | https://github.com/Mebus/cupp |
+| COOK | https://github.com/giteshnxtlvl/cook |
+
+### Social Media Resources
+
+| Name | URL |
+| --- | --- |
+| IppSec (YouTube) | https://www.youtube.com/channel/UCa6eh7gCkpPo5XXUDfygQQA |
+| IppSec.rocks | https://ippsec.rocks/?# |
+| 0xdf | https://0xdf.gitlab.io/
+| HackTricks | https://book.hacktricks.xyz/ |
+| Hacking Articles | https://www.hackingarticles.in/ |
+| Rana Khalil | https://rana-khalil.gitbook.io/hack-the-box-oscp-preparation/ |
+
+
 
 # Enumeración
 
