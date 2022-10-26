@@ -882,3 +882,8 @@ Los puertos principalmente permanecen cerrados, una vez se hace una secuencias d
 
 `knock <ip> <ports>` # golpeo de puertos con script "knock"
 
+# Webs para practicar
+
+- HackTheBox
+- TryHackMe
+- Providing Ground
