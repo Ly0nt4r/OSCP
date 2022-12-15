@@ -599,7 +599,7 @@ Enumerar y detectar pluggins vulnerables tambien ayudaran a la intrusión.
 
 Empezaremos con una web de ejemplo:
 
-`http://fakesite.com/report.php?id=23`
+`http://fakesite.com/reports.php?id=23`
 
 Lo primero que realizaremos, será obtener algún tipo de error, para ello intentaremos romper la Query.
 
