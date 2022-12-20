@@ -597,7 +597,7 @@ Enumerar y detectar pluggins vulnerables tambien ayudaran a la intrusión.
 
 ## Union Select
 
-Empezaremos con una web de ejemplo:
+Empezaremos con una web de ejemplos:
 
 `http://fakesite.com/reports.php?id=23`
 
