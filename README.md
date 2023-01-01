@@ -49,7 +49,7 @@
 - [Port Knocking](#port-knocking)
 
 
-credits by: 0xsyr0
+credits by: 0xsyr0.
 
 ### Basics
 
