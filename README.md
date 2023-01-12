@@ -88,7 +88,7 @@ credits by: 0xsyr0.
 | Wfuzz | https://github.com/xmendez/wfuzz |
 | WPScan | https://github.com/wpscanteam/wpscan |
 
-### Password Attacks
+### Password Attack
 
 | Name | URL |
 | --- | --- |
