@@ -319,7 +319,7 @@ Tips:
 
 ## Información basica de la web
 
-`whatweb <ip>` # obtener información util de la web, parecido a la extensión wappalyzer
+`whatweb <ip>` # obtener información util de la web parecido a la extensión wappalyzer
 
 `openssl s_client -connect domain.htb:443` # obteniendo información en webs con certificados ssl
 
