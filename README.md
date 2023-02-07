@@ -661,6 +661,8 @@ El atacante puede crear un usuario 'admin' con su propia contraseña. Ahora, la 
 
 `nc -vv -l -p 444` # Escuchando por el puerto de impresora.
 
+`ldapsearch -x -H ldap://192.168.90.122 -b "dc=hutch,dc=offsec" ` #ldap search para sacar usuarios y/o contraseñas
+
 *Enumerar DNS podría brindar información sobre servidores clave en el dominio como web, impresoras, recursos compartidos, etc...*
 
 `gobuster dns -d domain.local -t 25 -w /opt/Seclist/Discovery/DNS/subdomain-top2000.txt` # Enumerar DNS del domain.
