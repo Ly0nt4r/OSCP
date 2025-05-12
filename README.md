@@ -1,6 +1,3 @@
-![OSCP](https://user-images.githubusercontent.com/87484792/234709888-89aeb3f2-0c10-435b-9275-788a2421d3b3.png)
-
-
 
 ## Preparación para la OSCP - Metodología & Scripts 
 
